@@ -46,13 +46,12 @@ export class PlayerShip extends Ship {
 
 	constructor(type: ShipType) {
 		super(type);
-
 		this.element = document.querySelector(
 			`.${this.type}-container`
 		) as HTMLElement;
 	}
 	rotate() {
 		this.isHorizontal = !this.isHorizontal;
-		this.isHorizontal.classList.toggle(`${this.type}-container-vertical`);
+		this.element.classList.toggle(`${this.type}-container-vertical`);
 	}
 }

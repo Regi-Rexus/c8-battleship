@@ -4,6 +4,7 @@ export type Position = `${string}-${number}`; // create typeOf literal type
 type PossibleValue = "" | "hit" | "miss" | ShipType;
 type GridState = Record<Position, PossibleValue>;
 
+// created gridstate to keep track of what is happening on grid
 abstract class Grid {
 	state: GridState = {};
 	type: "player" | "computer";
